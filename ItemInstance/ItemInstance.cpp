@@ -95,12 +95,14 @@ std::string GetSaveString(std::vector<uint32>& values)
     uint32 flags = values[21];
 
     std::string enchantments;
-    for (int i = 22; i < 43; i++)
+    for (int i = 22; i < 58; i++)
     {
         if (i != 22)
             enchantments += " ";
-
-        enchantments += std::to_string(values[i]);
+  
+         enchantments += std::to_string(values[i]);
+        //if(i == 57)
+            //enchantments += " 0 0";
     }
 
     uint32 property_seed = values[43];
